@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const Login_reducer = createSlice({
   name: "Login",
   initialState: {
-    loginUser: {},
+    loginUser: [],
     loading: false,
     error: "",
   },
