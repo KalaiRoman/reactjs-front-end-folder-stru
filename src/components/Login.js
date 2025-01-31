@@ -1,7 +1,7 @@
 import React from 'react'
 import { Navigate, useNavigate } from 'react-router-dom';
 import { getToken } from '../middleware/TokenGet';
-
+import '../styles/Login.scss';
 function Login() {
   const navigate=useNavigate();
   const LoginButton=()=>{

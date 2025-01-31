@@ -1,4 +1,4 @@
-import { About, Home, Login } from "./routingPages";
+import { About, Forgetpassword, Home, Login, Signup } from "./routingPages";
 
 export const RouterData=[
    
@@ -14,9 +14,34 @@ export const RouterData=[
         auth:true
     },
 
-    // auth token data
     {
         id:2,
+        name:"Signup",
+        path:"/signup",
+        element:<Signup/>,
+        image:"",
+        exact:true,
+        index:true,
+        show:true,
+        auth:true
+    },
+
+    {
+        id:3,
+        name:"Forget password",
+        path:"/forget-password",
+        element:<Forgetpassword/>,
+        image:"",
+        exact:true,
+        index:true,
+        show:true,
+        auth:true
+    },
+
+
+    // auth token data
+    {
+        id:4,
         name:"Home",
         path:"/home",
         element:<Home/>,
@@ -27,7 +52,7 @@ export const RouterData=[
         auth:false
     },
     {
-        id:3,
+        id:5,
         name:"About",
         path:"/about",
         element:<About/>,

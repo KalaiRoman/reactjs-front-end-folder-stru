@@ -1,0 +1,115 @@
+@use "../abstract/" as *;
+
+.item {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    font-size: 14px;
+    justify-content: center;
+    gap: 20px !important;
+    position: relative;
+}
+
+.disabled-page {
+    color: #808e9b;
+}
+
+.actives-label {
+    // border: 1px solid #e95a5a !important;
+    border-radius: 40px;
+    color: #808e9b;
+    padding: 10px;
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(98deg, #9c1303 0%, #e81402 100%);
+    color: white;
+    outline: none !important;
+    border: none !important;
+}
+
+.break-me {
+}
+
+.next {
+    font-size: 0.897rem !important;
+    right: 0% !important;
+    position: absolute;
+    font-weight: 600;
+    padding: 10px;
+    color: black;
+    width: 70px;
+
+    @include xsBreakPoint {
+        right: 2%;
+        font-size: 0.689rem !important;
+    }
+    @include smBreakPoint {
+        right: 5%;
+    }
+    @include mdBreakPoint {
+        right: 5%;
+    }
+    @include lgBreakPoint {
+        right: 10%;
+    }
+}
+
+.pagination {
+    align-items: center;
+    // background-color: #0fbcf9;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    justify-content: center;
+    list-style-type: none;
+    position: relative;
+    width: 100% !important;
+    padding: 10px 10px;
+    margin: 0 auto;
+    gap: 10px !important;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    border-radius: 10px;
+    @include xsBreakPoint {
+        width: 100% !important;
+    }
+    @include smBreakPoint {
+        width: 100% !important;
+    }
+    @include mdBreakPoint {
+        width: 100% !important;
+    }
+    @include lgBreakPoint {
+        width: 90% !important;
+    }
+}
+
+.pagination-page {
+    font-weight: 700;
+    border: 1px solid #f4f4f4;
+    width: 40px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.previous {
+    // border-right: solid 1px #808e9b;
+    font-size: 0.897rem !important;
+    left: 3%;
+    position: absolute;
+    font-weight: 600;
+    @include xsBreakPoint {
+        left: 2%;
+        font-size: 0.689rem !important;
+    }
+    @include smBreakPoint {
+        left: 5%;
+    }
+    @include mdBreakPoint {
+        left: 5%;
+    }
+    @include lgBreakPoint {
+        left: 10%;
+    }
+}
