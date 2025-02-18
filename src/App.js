@@ -1,21 +1,11 @@
-import React, { useEffect } from 'react'
-import Routers from './router/Routers'
-import { useNavigate } from 'react-router-dom';
-import { RouterData } from './utils/routerData';
-
+import React from "react";
+import Routings from "./routings/Routings";
+import './App.scss';
 function App() {
-
-  const navigate=useNavigate();
-
-  const token=localStorage.getItem("auth")?localStorage.getItem("auth"):false;
-  useEffect(()=>{
-   
-  },[token])
   return (
     <div>
-      <Routers/>
+      <Routings />
     </div>
-  )
+  );
 }
-
-export default App
+export default App;

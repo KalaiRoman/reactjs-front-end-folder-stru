@@ -1,29 +1,33 @@
 import { createSlice } from "@reduxjs/toolkit";
-const Login_reducer = createSlice({
+
+let initialState = {
+  userData: {},
+  loading: false,
+  error: "",
+};
+
+const login_reducer = createSlice({
   name: "Login",
-  initialState: {
-    loginUser: [],
-    loading: false,
-    error: "",
-  },
+  initialState: initialState,
   reducers: {
-    setLoading: (state, action) => {
+    LoginRequest(state, action) {
       state.loading = true;
+      state.userData = {};
+      state.error = "";
     },
-    LoginUserSuccess: (state, action) => {
-      if (action.payload) {
-        state.loading = false;
-        state.loginUser = action.payload;
-      }
-    },
-    LoginUserFailure: (state, action) => {
+    LoginSuccess(state, action) {
       state.loading = false;
-      state.loginUser = {};
+      state.userData = action.payload;
+      state.error = "";
+    },
+    LoginFailed(state, action) {
+      state.loading = false;
+      state.userData = {};
       state.error = action.payload;
     },
   },
 });
 
-export const { setLoading, LoginUserSuccess, LoginUserFailure } =
-  Login_reducer.actions;
-export default Login_reducer.reducer;
+export const { LoginRequest, LoginSuccess, LoginFailed } =
+  login_reducer.actions;
+export default login_reducer.reducer;

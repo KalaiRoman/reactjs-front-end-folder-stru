@@ -1,11 +1,8 @@
-import React from 'react'
-
-function Home() {
-  return (
-    <div>
-      Home
-    </div>
-  )
+import React from "react";
+import "../styles/index.scss";
+import HOC from "../hoc/HOC";
+function Home(props) {
+  return <div className="main-home">home</div>;
 }
 
-export default Home
+export default HOC(Home);
